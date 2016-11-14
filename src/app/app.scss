@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+// Use Century-Gothic as eGobie app's default font
+$century-gothic-font-path: "../assets/fonts/Century_Gothic" !default;
+@font-face {
+  font-family: "eGobieFont";
+  src: url("#{$century-gothic-font-path}/Century_Gothic.eot");
+  src: url("#{$century-gothic-font-path}/Century_Gothic.eot?#iefix") format("embedded-opentype"),
+       url("#{$century-gothic-font-path}/Century_Gothic.woff2") format("woff2"),
+       url("#{$century-gothic-font-path}/Century_Gothic.woff") format("woff"),
+       url("#{$century-gothic-font-path}/Century_Gothic.ttf") format("truetype"),
+       url("#{$century-gothic-font-path}/Century_Gothic.svg#eGobieFont") format("svg");
+}
+
+* {
+  font-family: eGobieFont !important;
+}
