@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 import { SignUp } from '../signup/signup';
+import { ResetPassword } from '../reset/reset';
 
 @Component({
     templateUrl: 'signin.html',
@@ -10,11 +11,19 @@ import { SignUp } from '../signup/signup';
     ]
 })
 export class SignIn {
-    constructor(private navCtrl: NavController) {
+    constructor(
+        private navCtrl: NavController,
+        private modalCtrl: ModalController
+    ) {
 
     }
 
     signUp(event) {
-        this.navCtrl.push(SignUp);
+        this.navCtrl.setRoot(SignUp);
+    }
+
+    resetPassword(event) {
+        let resetPassword = this.modalCtrl.create(ResetPassword);
+        resetPassword.present();
     }
 }

@@ -15,6 +15,7 @@ import { SignModule } from './sign/sign.module';
   imports: [
     SignModule,
     IonicModule.forRoot(MyApp, {
+        mode: 'ios',
         iconMode: 'md',
         tabsPlacement: 'bottom',
         pageTransition: 'ios-transition'

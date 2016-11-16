@@ -1,0 +1,47 @@
+<ion-header no-shadow class="egobie-header">
+  <ion-toolbar no-border-top>
+    <ion-title>RESET PASSWORD</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="dismiss($event)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<div class="egobie-form-mask"></div>
+
+<ion-content class="egobie-form egobie-reset-1" *ngIf="step === 1">
+  <div class="note">We will send a temporary token to your email address</div>
+  <ion-list>
+    <ion-item class="egobie-form-input">
+      <ion-icon name="person"></ion-icon>
+      <input type="text" placeholder="Your username"/>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="egobie-form-button" (click)="resetPassword($event)">Next</button>
+</ion-content>
+
+<ion-content class="egobie-form egobie-reset-2" *ngIf="step === 2">
+  <ion-list>
+    <ion-item class="egobie-form-input">
+      <ion-icon name="lock"></ion-icon>
+      <input type="text" placeholder="Please input your token"/>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="egobie-form-button" (click)="resetPassword($event)">Next</button>
+  <button ion-button class="egobie-form-button">Re-send Email</button>
+</ion-content>
+
+<ion-content class="egobie-form egobie-reset-3" *ngIf="step === 3">
+  <ion-list>
+    <ion-item class="egobie-form-input">
+      <ion-icon name="lock"></ion-icon>
+      <input type="password" placeholder="New password"/>
+    </ion-item>
+    <ion-item class="egobie-form-input">
+      <ion-icon name="lock" style="color: #000000"></ion-icon>
+      <input type="password" placeholder="Confirm"/>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="egobie-form-button" (click)="resetPassword($event)">Submit</button>
+</ion-content>

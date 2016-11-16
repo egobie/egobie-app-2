@@ -4,6 +4,9 @@ import { IonicModule } from 'ionic-angular';
 import { Sign } from './sign.component';
 import { SignIn } from './signin/signin';
 import { SignUp } from './signup/signup';
+import { ResetPassword } from './reset/reset';
+
+import { MessageService } from '../../services/message.service';
 
 @NgModule({
     imports: [
@@ -12,7 +15,8 @@ import { SignUp } from './signup/signup';
     declarations: [
         Sign,
         SignIn,
-        SignUp
+        SignUp,
+        ResetPassword
     ],
     exports: [
         Sign
@@ -20,7 +24,11 @@ import { SignUp } from './signup/signup';
     entryComponents: [
         Sign,
         SignIn,
-        SignUp
+        SignUp,
+        ResetPassword
+    ],
+    providers: [
+        MessageService
     ]
 })
 export class SignModule {

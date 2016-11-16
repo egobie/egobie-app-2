@@ -130,6 +130,10 @@ $century-gothic-font-path: "../assets/fonts/Century_Gothic" !default;
   font-family: eGobieFont !important;
 }
 
+.egobie-90 {
+  width: 90%;
+}
+
 .egobie-full-page {
   width: 100%;
   height: 100%;
@@ -159,6 +163,92 @@ $century-gothic-font-path: "../assets/fonts/Century_Gothic" !default;
   z-index: -100;
 }
 
-.egobie-90 {
-  width: 90%;
+.egobie-error {
+  .toast-message {
+    color: red;
+    font-size: 14px;
+    border-radius: 5px;
+    background: transparent;
+  }
+}
+
+.egobie-header {
+  ion-toolbar {
+    .toolbar-background {
+      background-color: rgba(0, 0, 0, 0.75) !important;
+      border: 0px !important;
+    }
+
+    ion-title div.toolbar-title, button {
+        color: #FFFFFF !important;
+    }
+
+    ion-title div.toolbar-title {
+      font-size: 14px;
+    }
+  }
+}
+
+.egobie-form {
+  background-color: rgba(147, 153, 156, 0.10);
+
+  ion-list {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  div.scroll-content {
+    margin-top: 44px;
+  }
+}
+
+.egobie-form-mask {
+  @extend .egobie-full-page;
+
+  background-color: #FFFFFF;
+}
+
+.egobie-form-input {
+  @extend .egobie-center;
+  @extend .egobie-90;
+
+  border: 0px !important;
+  padding: 0px;
+  margin-top: 10px;
+  background: transparent;
+
+  ion-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    margin-right: -3px;
+    color: #FFFFFF;
+    background-color: rgb(5, 10, 16);
+  }
+
+  input {
+    @include placehoder-color(#93999C);
+
+    height: 40px;
+    width: 100%;
+    color: #FFFFFF;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 0px;
+    background-color: rgba(12,21,23,0.6);
+    vertical-align: bottom;
+  }
+}
+
+.egobie-form-button {
+  @extend .egobie-center;
+  @extend .egobie-90;
+
+  background: rgba(17, 18, 19, 0.66);
+  color: #FFFFFF;
+
+  &.activated {
+    background-color: rgba(17, 18, 19, 0.66) !important;
+  }
 }

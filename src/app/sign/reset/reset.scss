@@ -1,0 +1,11 @@
+.egobie-reset-1 {
+  @extend .egobie-full-page;
+
+  div.note {
+    width: 90%;
+    margin: 10px auto 10px auto;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+}

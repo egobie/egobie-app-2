@@ -24,7 +24,8 @@
       <input type="text" placeholder="Invitation Code (Optional)" minlength="1" maxlength="16"/>
     </ion-item>
 
-    <button ion-button outline class="egobie-sign-button">Sign Up</button>
+    <button ion-button outline class="egobie-sign-button"
+      (click)="isInUse($event, 'username')">Sign Up</button>
     <ion-item class="egobie-sign-link">
       <a class="egobie-left" (click)="signIn($event)">Sign In</a>
     </ion-item>
