@@ -1,3 +1,32 @@
-<ion-content class='egobie-page-signup'>
-  <p (click)='signIn($event)'>Go to SignIn</p>
-</ion-content>
+<ion-scroll scrollX="false" class="egobie-sign">
+  <div class="egobie-mask"></div>
+  <ion-list>
+    <img class="egobie-sign-logo" alt=""/>
+    <div class="egobie-sign-company">eGobie Car Services</div>
+    <ion-item class="egobie-sign-input">
+      <ion-icon name="person"></ion-icon>
+      <input type="text" placeholder="Username" minlength="1" maxlength="16"/>
+    </ion-item>
+    <ion-item class="egobie-sign-input">
+      <ion-icon name="lock"></ion-icon>
+      <input type="password" placeholder="Password" minlength="1" maxlength="16"/>
+    </ion-item>
+    <ion-item class="egobie-sign-input">
+      <ion-icon></ion-icon>
+      <input type="password" placeholder="Confirm Password" minlength="1" maxlength="16"/>
+    </ion-item>
+    <ion-item class="egobie-sign-input">
+      <ion-icon name="mail"></ion-icon>
+      <input type="text" placeholder="Email Address" minlength="1" maxlength="16"/>
+    </ion-item>
+    <ion-item class="egobie-sign-input">
+      <ion-icon name="pricetags"></ion-icon>
+      <input type="text" placeholder="Invitation Code (Optional)" minlength="1" maxlength="16"/>
+    </ion-item>
+
+    <button ion-button outline class="egobie-sign-button">Sign Up</button>
+    <ion-item class="egobie-sign-link">
+      <a class="egobie-left" (click)="signIn($event)">Sign In</a>
+    </ion-item>
+  </ion-list>
+</ion-scroll>

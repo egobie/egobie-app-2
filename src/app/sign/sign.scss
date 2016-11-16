@@ -11,7 +11,7 @@
   content: logo($Logo-White);
   height: 133px;
   width: 133px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .egobie-sign-company {
@@ -21,7 +21,7 @@
   width: 100%;
   font-size: 20px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   color: #FFFFFF;
 }
 
@@ -48,6 +48,7 @@
     @include placehoder-color(#FFFFFF);
 
     height: 30px;
+    width: 85%;
     color: #FFFFFF;
     padding-left: 10px;
     font-size: 14px;
@@ -64,6 +65,8 @@
   margin-top: 20px;
   color: #FFFFFF;
   border-color: #FFFFFF;
+  text-transform: capitalize;
+  border-radius: 5px;
 
   &.activated {
     background-color: transparent !important;
