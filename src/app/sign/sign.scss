@@ -1,0 +1,87 @@
+.egobie-sign {
+  @extend .egobie-full-page;
+
+  background: image($Sign-Bg) no-repeat center center;
+  background-size: cover;
+}
+
+.egobie-sign-logo {
+  @extend .egobie-center;
+
+  content: logo($Logo-White);
+  height: 133px;
+  width: 133px;
+  margin-top: 50px;
+}
+
+.egobie-sign-company {
+  @extend .egobie-center;
+  text-align: center;
+  height: 20px;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+.egobie-sign-input {
+  @extend .egobie-center;
+  @extend .egobie-90;
+
+  background: transparent;
+  border-color: #FFFFFF;
+  border: 0px;
+  border-bottom: 1px solid #FFFFFF;
+
+  ion-icon {
+    color: #FFFFFF;
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-right: 1px solid #FFFFFF;
+  }
+
+  input {
+    @include placehoder-color(#FFFFFF);
+
+    height: 30px;
+    color: #FFFFFF;
+    padding-left: 10px;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    vertical-align: bottom;
+  }
+}
+
+.egobie-sign-button {
+  @extend .egobie-center;
+  @extend .egobie-90;
+
+  margin-top: 20px;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+
+  &.activated {
+    background-color: transparent !important;
+  }
+}
+
+.egobie-sign-link {
+  @extend .egobie-center;
+  @extend .egobie-90;
+
+  padding: 0px;
+  border-bottom: 0px !important;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  background: transparent;
+
+  a {
+    color: #FFFFFF;
+  }
+}

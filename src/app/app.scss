@@ -1,5 +1,14 @@
 // http://ionicframework.com/docs/v2/theming/
 
+.item-inner {
+  border-bottom: 0px !important;
+  padding: 0px !important;
+}
+
+ion-label {
+  border: 0px !important;
+  margin: 0px 0px 5px 0px !important;
+}
 
 // App Global Sass
 // --------------------------------------------------
@@ -14,7 +23,96 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+$Tutorial-1: 'tp1.svg';
+$Tutorial-2: 'tp2.svg';
+$Tutorial-3: 'tp3.svg';
+$Tutorial-4: 'tp4.svg';
+$Tutorial-5: 'tp5.svg';
 
+$Sign-In-Logo: 'sign_in.svg';
+$Sign-Up-Logo: 'sign_up.svg';
+$Sign-Bg: 'bg.jpg';//'sign_bg.svg';
+
+$Menu-Home-On: 'home_on.png';
+$Menu-Home-Off: 'home_off.png';
+
+$Menu-Notification-On: 'notifications_on.png';
+$Menu-Notification-Off: 'notifications_off.png';
+
+$Menu-Service-On: 'services_on.png';
+$Menu-Service-Off: 'services_off.png';
+
+$Menu-History-On: 'history_on.png';
+$Menu-History-Off: 'history_off.png';
+
+$Menu-Vehicle-On: 'vehicles_on.png';
+$Menu-Vehicle-Off: 'vehicles_off.png';
+
+$Menu-Coupon-On: 'coupon_on.png';
+$Menu-Coupon-Off: 'coupon_off.png';
+
+$Menu-Payment-On: 'payment_on.png';
+$Menu-Payment-Off: 'payment_off.png';
+
+$Menu-Setting-On: 'settings_on.png';
+$Menu-Setting-Off: 'settings_off.png';
+
+$Menu-About-On: 'about_on.png';
+$Menu-About-Off: 'about_off.png';
+
+$Logo-White: 'white.png';
+$Logo-Dark-Navy-Blue: 'dark_navy_blue.png';
+$Logo-Light-Grey-Blue: 'light_grey_blue.png';
+
+$Payment-Amex: 'payment_amex.png';
+$Payment-Visa: 'payment_visa.png';
+$Payment-Master: 'payment_master.png';
+
+$Home-On-Demand: 'ondemand.jpg';
+$Home-Reserve: 'reserve.jpg';
+$Home-Reserve-Temp: 'reserve-temp.jpg';
+
+$Coupon-Gift: 'gift.jpg';
+$Coupon-Tag: 'tag.jpg';
+
+$State-NJ: 'state/NJ.png';
+
+@function image($name) {
+    @return url('../assets/images/#{$name}');
+}
+
+@function icon($name) {
+    @return url('../assets/images/icon/#{$name}');
+}
+
+@function logo($name) {
+    @return url('../assets/images/logo/#{$name}');
+}
+
+@function tutorial($name) {
+    @return url('../assets/images/tutorial/#{$name}');
+}
+
+@mixin appearance($content) {
+    -webkit-appearance: $content;
+    -moz-appearance: $content;
+    appearance: $content;
+}
+
+@mixin placehoder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
 
 // Use Century-Gothic as eGobie app's default font
 $century-gothic-font-path: "../assets/fonts/Century_Gothic" !default;
@@ -30,4 +128,37 @@ $century-gothic-font-path: "../assets/fonts/Century_Gothic" !default;
 
 * {
   font-family: eGobieFont !important;
+}
+
+.egobie-full-page {
+  width: 100%;
+  height: 100%;
+}
+
+.egobie-center {
+  display: block;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.egobie-left {
+  float: left;
+}
+
+.egobie-right {
+  float: right;
+}
+
+.egobie-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(15, 16, 37, 0.55);
+  z-index: -100;
+}
+
+.egobie-90 {
+  width: 90%;
 }

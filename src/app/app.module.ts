@@ -4,6 +4,8 @@ import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 
+import { SignModule } from './sign/sign.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -11,6 +13,7 @@ import { Page2 } from '../pages/page2/page2';
     Page2
   ],
   imports: [
+    SignModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
