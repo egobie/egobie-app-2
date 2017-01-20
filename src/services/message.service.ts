@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ToastController } from 'ionic-angular';
+import { ToastController, LoadingController } from 'ionic-angular';
+
 
 @Injectable()
 export class MessageService {
     constructor(
-        private toastCtrl: ToastController
+        private toastCtrl: ToastController,
+        private loadingCtrl: LoadingController
     ) {
 
     }
@@ -18,5 +20,14 @@ export class MessageService {
             dismissOnPageChange: true
         });
         toast.present();
+    }
+
+    showLoading() {
+        let loading = this.loadingCtrl.create({
+            spinner: 'circles',
+            dismissOnPageChange: true,
+            duration: 10000
+        });
+        loading.present();
     }
 }

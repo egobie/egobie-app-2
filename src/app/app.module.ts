@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
 
 import { SignModule } from './sign/sign.module';
+import { ResidentModule } from './resident/resident.module';
+
+import { EventService } from '../services/event.service';
 
 @NgModule({
   declarations: [
-    MyApp,
-    Page1,
-    Page2
+    MyApp
   ],
   imports: [
     SignModule,
+    ResidentModule,
     IonicModule.forRoot(MyApp, {
         mode: 'ios',
         iconMode: 'md',
@@ -23,10 +23,10 @@ import { SignModule } from './sign/sign.module';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    Page1,
-    Page2
+    MyApp
   ],
-  providers: []
+  providers: [
+      EventService
+  ]
 })
 export class AppModule {}

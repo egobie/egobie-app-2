@@ -12,7 +12,7 @@
       <input type="password" placeholder="Password" minlength="1" maxlength="16"/>
     </ion-item>
 
-    <button ion-button outline class="egobie-sign-button">Sign In</button>
+    <button ion-button outline class="egobie-sign-button" (click)="signIn($event)">Sign In</button>
     <ion-item class="egobie-sign-link">
       <a class="egobie-left" (click)="resetPassword($event)">Forget Password</a>
       <a class="egobie-right" (click)="signUp($event)">Sign Up</a>
